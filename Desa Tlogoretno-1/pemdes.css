@@ -200,7 +200,6 @@ nav .navbar .links li:hover .galeri-sub-menu {
   margin: 50px 40px;
   position: relative;
   top: 35px;
-  height: 100vh;
 }
 
 .row {
@@ -469,14 +468,33 @@ section {
 .contact-box li a {
   display: block;
 }
+.aparatur {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+  display: table;
+  margin-bottom: 15px;
+  color: black;
+}
+.aparatur,
+.aparatur th,
+.aparatur td {
+  border: 1px solid black;
+  padding: 3px;
+  border-collapse: collapse;
+}
+.aparatur th {
+  background-color: #50a7ff;
+  color: white;
+}
 table {
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
-  border-collapse: collapse;
-  border-spacing: 0;
   display: table;
   color: white;
 }
+
 table td {
   padding: 0 5px;
   display: table-cell;
