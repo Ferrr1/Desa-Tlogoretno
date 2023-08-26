@@ -790,5 +790,8 @@ table td {
     .container {
       width: 370px;
     }
+    #fourth .row {
+      margin: 0;
+    }
   }
 }
