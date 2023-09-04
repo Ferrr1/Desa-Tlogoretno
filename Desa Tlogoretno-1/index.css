@@ -432,11 +432,79 @@ input[type="submit"]:active {
   padding: 0 15px;
   margin: 0 auto;
 }
+.carousel {
+  width: 100vh;
+  height: 100vh;
+  position: relative;
+}
+
+.carousel ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, .5);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  background-color: rgba(0, 0, 0, .1);
+  margin: 0 -100px;
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.carousel-button:focus {
+  outline: 1px solid black;
+}
+
+.carousel-button.prev {
+  left: 1rem;
+}
+
+.carousel-button.next {
+  right: 1rem;
+}
+
 .widget-inner {
   display: flex;
   flex-wrap: wrap;
 }
-section {
+.contact {
   padding: 40px 10% 65px;
   background-color: #50a7ff;
 }
@@ -573,6 +641,10 @@ table td {
   .logo a {
     font-size: 10px;
   }
+  .slide img {
+    width: 500px;
+    height: 500px;
+  }
   .card-01 {
     flex: 100%;
     max-width: 590px;
@@ -701,6 +773,10 @@ table td {
   .navbar .nav-links.show3 .links .galeri-arrow {
     transform: rotate(180deg);
   }
+  .slide img {
+    width: 350px;
+    height: 350px;
+  }
   .card-01 {
     flex: 100%;
     max-width: 600px;
@@ -728,7 +804,7 @@ table td {
   .container {
     width: 750px;
   }
-  section {
+  .contact {
     padding: 65px 4% 55px;
   }
   .footer-col-1,
@@ -741,6 +817,10 @@ table td {
   @media (max-width: 430px) {
     nav .navbar .nav-links {
       max-width: 100%;
+    }
+    .slide img {
+      width: 200px;
+      height: 200px;
     }
     .card-01 {
       margin-left: 40px;

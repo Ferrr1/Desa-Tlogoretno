@@ -6,16 +6,18 @@
   box-sizing: border-box;
 }
 :root {
-  --primary-color : white;
-  --secondary-color : rgb(0, 0, 0);
-  --tertiary-color : #fff;
-  --fourth-color : rgb(12, 12, 146);
+  --primary-color: white;
+  --secondary-color: rgb(0, 0, 0);
+  --tertiary-color: #fff;
+  --fourth-color: rgb(12, 12, 146);
+  --fiveth-color: rgb(0, 0, 0);
 }
 .dark-theme {
-  --primary-color : rgb(36, 36, 36);
-  --secondary-color : white;
-  --tertiary-color : rgb(48, 48, 48);
-  --fourth-color : rgb(200, 200, 206);
+  --primary-color: rgb(36, 36, 36);
+  --secondary-color: white;
+  --tertiary-color: rgb(48, 48, 48);
+  --fourth-color: rgb(200, 200, 206);
+  --fiveth-color: rgba(255, 255, 255, 0.389);
 }
 #icon {
   font-size: 22px;
@@ -24,7 +26,8 @@
 }
 body {
   min-height: 100vh;
-  background-color: #f1f1f1;
+  background-color: var(--primary-color);
+  transition: all 0.4s ease;
 }
 /* Navbar Start */
 nav {
@@ -83,9 +86,10 @@ nav .navbar .links li a {
   font-size: 10px;
   font-weight: 600;
   padding: 0 15px;
+  transition: all 0.3s ease;
 }
 nav .navbar .links .sub-links > a:hover {
-  color: white;
+  color: var(--primary-color);
 }
 .links li:hover .profile-arrow,
 .links li:hover .pelayanan-arrow,
@@ -110,7 +114,7 @@ nav .navbar .links li .sub-menu {
   top: 70px;
   left: 0;
   line-height: 40px;
-  background: white;
+  background: var(--primary-color);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 4px 4px;
   display: none;
@@ -126,7 +130,7 @@ nav .navbar .links li:hover .galeri-sub-menu {
   border-bottom: 1px solid rgba(0, 0, 0, 0.226);
 }
 .navbar .links li .sub-menu a {
-  color: black;
+  color: var(--secondary-color);
   font-size: 10px;
   font-weight: 600;
 }
@@ -171,7 +175,7 @@ nav .navbar .links li:hover .galeri-sub-menu {
   top: 80px;
   height: 60px;
   width: 300px;
-  color: black;
+  color: var(--secondary-color);
   background: #162125;
   border-radius: 6px;
   opacity: 0;
@@ -221,13 +225,66 @@ nav .navbar .links li:hover .galeri-sub-menu {
   top: 35px;
 }
 
-.row {
+/* Start Search Bar Produk dan Berita */
+.input-group {
+  display: flex;
+  justify-content: center;
+}
+
+input[type="text"] {
+  width: 750px;
+  height: 40px;
+  padding: 10px;
+  outline: #16212585;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+input[type="text"]:focus {
+  outline: none;
+  filter: drop-shadow(#50a7ff 1px 1px 3px);
+  -webkit-filter: drop-shadow(#50a7ff 1px 1px 3px);
+}
+input[type="text"]::placeholder {
+  font-size: 14px;
+  color: #1621257d;
+}
+button i {
+  position: absolute;
+  font-size: 18px;
+  margin-left: -20px;
+  margin-top: 2px;
+}
+button[type="submit"] {
+  font-family: "Rajdhani", sans-serif;
+  background-color: #50a7ff;
+  width: 80px;
+  height: 40px;
+  padding-left: 20px;
+  outline: none;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  -webkit-border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  -ms-border-radius: 0 5px 5px 0;
+  -o-border-radius: 0 5px 5px 0;
+}
+.container {
   width: 100%;
+  height: 100vh;
+}
+.row {
+  max-width: 1170px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-
+/* End Search Bar Produk dan  */
 .card-01 {
   background: #ffffff;
   position: relative;
@@ -321,28 +378,6 @@ figure {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.btn-kategori {
-  position: relative;
-  font-family: "Rajdhani", sans-serif;
-  padding: 5px 10px;
-  margin: 3px 2px;
-  font-size: 12px;
-  color: #ffffff;
-  background-color: #50a7ff;
-  border-color: #00695c;
-  cursor: pointer;
-  border: 1px solid transparent;
-  border-radius: 15px;
-  font-weight: 400;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-}
-.btn-kategori:hover {
-  background-color: #164b60;
-  color: #f9c939;
-}
 .entry-title {
   position: relative;
   font-family: "Rajdhani", sans-serif;
@@ -381,68 +416,11 @@ figure {
   font-size: 15px;
   font-weight: 700;
 }
-.second-title::before {
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 2px;
-  display: block;
-  background-color: #50a7ff;
-  bottom: -10px;
-}
-.second-title-outer::before {
-  content: "";
-  position: absolute;
-  width: 80%;
-  margin: 28px 20px;
-  height: 1Q;
-  display: block;
-  background-color: #50a7ff;
-}
-
-.searchform {
-  padding: 20px;
-}
-.form_field {
-  position: absolute;
-  width: 290px;
-  padding: 8px 10px;
-  border: 1px solid #dddddd;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-}
-input[type="submit"] {
-  position: relative;
-  top: 3px;
-  left: 74.5%;
-  background-color: #50a7ff;
-  color: white;
-  padding: 6px 10px;
-  text-transform: capitalize;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-input[type="submit"]:hover {
-  background-color: #458ea0;
-}
-input[type="submit"]:active {
-  background-color: #164b60;
-}
 
 /* Footer CSS */
 #footer-section {
   width: 100%;
   height: 260px;
-}
-.site-footer {
-  max-width: 100%;
-  color: white;
-  background: #50a7ff;
-  padding: 20px 0;
 }
 .container {
   max-width: 1400px;
@@ -450,11 +428,85 @@ input[type="submit"]:active {
   padding: 0 15px;
   margin: 0 auto;
 }
+
+#blog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.blog-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.blog-box {
+  max-width: 25%;
+  max-height: 700px;
+  background-color: var(--tertiary-color);
+  border: 1px solid #ebe8e8;
+  filter: drop-shadow(var(--fiveth-color) 0.5px 0.5px 2px);
+  margin: 20px;
+  border-radius: 5px;
+  -webkit-filter: drop-shadow(var(--fiveth-color) 0.5px 0.5px 2px);
+}
+
+.blog-img {
+  width: 100%;
+  height: auto;
+}
+
+.blog-img img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.blog-text {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-text span {
+  color: red;
+  font-size: 0.9rem;
+}
+
+.blog-text .blog-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+}
+
+.blog-text .blog-title:hover {
+  color: red;
+  transition: all ease 0.3s;
+}
+
+.blog-text p {
+  color: gray;
+  font-size: 0.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 20px 0;
+}
 .widget-inner {
   display: flex;
   flex-wrap: wrap;
 }
-section {
+.contact {
   padding: 40px 10% 65px;
   background-color: #50a7ff;
 }
@@ -538,7 +590,7 @@ table td {
   max-width: 200px;
   height: 1px;
   margin: 20px 0 0 30px;
-  background-color: white;
+  background-color: var(--primary-color);
 }
 .widget-title::before {
   content: "";
@@ -546,7 +598,7 @@ table td {
   width: 60px;
   height: 3px;
   margin-top: 18px;
-  background-color: white;
+  background-color: var(--primary-color);
 }
 #tentang {
   font-family: "Open Sans", sans-serif;
@@ -602,6 +654,9 @@ table td {
     flex: 100%;
     max-width: 600px;
   }
+  .blog-box {
+    width: 300px;
+  }
   #secondary,
   #third,
   #fourth {
@@ -632,7 +687,7 @@ table td {
     display: block;
     max-width: 270px;
     width: 100%;
-    background: white;
+    background: var(--primary-color);
     line-height: 40px;
     padding: 20px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -646,12 +701,12 @@ table td {
   }
   .sidebar-logo .logo-name {
     font-size: 25px;
-    color: black;
+    color: var(--secondary-color);
   }
   .sidebar-logo i,
   .navbar .bx-menu {
     font-size: 25px;
-    color: black;
+    color: var(--secondary-color);
   }
   nav .navbar .links {
     display: block;
@@ -730,6 +785,9 @@ table td {
     flex: 100%;
     max-width: 600px;
   }
+  .blog-box {
+    width: 70%;
+  }
   #secondary,
   #third,
   #fourth {
@@ -746,7 +804,7 @@ table td {
   .container {
     width: 750px;
   }
-  section {
+  .contact {
     padding: 65px 4% 55px;
   }
   .footer-col-1,
@@ -772,6 +830,13 @@ table td {
       flex: 100%;
       width: 360px;
     }
+    .blog-box {
+      margin: 20px 10px;
+      width: 100%;
+    }
+    #blog {
+      padding: 20px;
+    }
     #secondary,
     #third,
     #fourth {
@@ -789,9 +854,6 @@ table td {
     }
     .container {
       width: 370px;
-    }
-    #fourth .row {
-      margin: 0;
     }
   }
 }
