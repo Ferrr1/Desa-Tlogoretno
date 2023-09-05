@@ -446,7 +446,7 @@ figure {
 
 .blog-box {
   width: 222.5px;
-  height: 380px;
+  height: 300px;
   background-color: var(--primary-color);
   filter: drop-shadow(var(--secondary-color) 0.5px 0.5px 1px);
   margin: 10px;
