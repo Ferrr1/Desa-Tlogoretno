@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Selamat Datang di Website Desa Tlogoretno, Kecamatan Brondong, Kabupaten Lamongan</title>
     <link rel="stylesheet" href="berita.css">
-
+    
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
     <link rel="icon" href="img/logo-desa-1.png">
@@ -53,7 +53,7 @@
                             <li><a href="surat.html">SURAT MENYURAT</a></li>
                         </ul>
                     </li>
-                    <li class="sub-links"><a href="#">PRODUK DESA</a></li>
+                    <li class="sub-links"><a href="produk.html">PRODUK DESA</a></li>
                     <li class="sub-links"><a href="berita.html">BERITA</a></li>
                     <li class="sub-links">
                         <a href="#">GALERI
@@ -71,25 +71,7 @@
     <!-- Navbar End -->
     <!-- Article Start -->
     <section id="blog">
-        <div id="main">
-            <div class="row">
-                <form method="GET" action="">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Masukkan Judul Produk" autocomplete="off"
-                            id="articles" minlength="3" required>
-                        <span class="input-group-btn">
-                            <button class="btn btn-search" type="submit">
-                                <i class='bx bx-search' style='color:#ffffff'></i>
-                                Search</button>
-                        </span>
-                    </div>
-                </form>
-                <div id="produk">
 
-                </div>
-            </div>
-        </div>
-        </div>
         <div class="blog-container">
             <div class="blog-box">
                 <div class="blog-img">
@@ -98,8 +80,7 @@
                 <div class="blog-text">
                     <span>17 Agustus 2023</span>
                     <a href="#" class="blog-title">Tes Drive</a>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde iusto nemo illum ipsa magni
-                        pariatur ratione veritatis laudantium mollitia dolore.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde iusto nemo illum ipsa magni pariatur ratione veritatis laudantium mollitia dolore.</p>
                 </div>
             </div>
             <div class="blog-box">
@@ -109,8 +90,7 @@
                 <div class="blog-text">
                     <span>27 Agustus 2023</span>
                     <a href="#" class="blog-title">Tes Drive</a>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde iusto nemo illum ipsa magni
-                        pariatur ratione veritatis laudantium mollitia dolore.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde iusto nemo illum ipsa magni pariatur ratione veritatis laudantium mollitia dolore.</p>
                 </div>
             </div>
             <div class="blog-box">
@@ -120,8 +100,7 @@
                 <div class="blog-text">
                     <span>04 September 2023</span>
                     <a href="#" class="blog-title">Tes Drive</a>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde iusto nemo illum ipsa magni
-                        pariatur ratione veritatis laudantium mollitia dolore.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde iusto nemo illum ipsa magni pariatur ratione veritatis laudantium mollitia dolore.</p>
                 </div>
             </div>
         </div>
@@ -198,11 +177,11 @@
     <!-- Footer End -->
     <script>
         var icon = document.getElementById("icon");
-        icon.onclick = function () {
+        icon.onclick = function() {
             document.body.classList.toggle("dark-theme");
-            if (icon.classList.contains("bx-moon")) {
+            if(icon.classList.contains("bx-moon")) {
                 icon.classList.replace('bx-moon', 'bx-sun');
-            } else {
+            }else {
                 icon.classList.replace('bx-sun', 'bx-moon');
             }
         }

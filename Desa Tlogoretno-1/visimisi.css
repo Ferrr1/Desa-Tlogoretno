@@ -24,7 +24,8 @@
 }
 body {
   min-height: 100vh;
-  background-color: #f1f1f1;
+  background-color: var(--primary-color);
+  transition: all 0.4s ease;
 }
 /* Navbar Start */
 nav {
@@ -83,9 +84,10 @@ nav .navbar .links li a {
   font-size: 10px;
   font-weight: 600;
   padding: 0 15px;
+  transition: all 0.3s ease;
 }
 nav .navbar .links .sub-links > a:hover {
-  color: white;
+  color: var(--primary-color);
 }
 .links li:hover .profile-arrow,
 .links li:hover .pelayanan-arrow,
@@ -110,7 +112,7 @@ nav .navbar .links li .sub-menu {
   top: 70px;
   left: 0;
   line-height: 40px;
-  background: white;
+  background: var(--primary-color);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 4px 4px;
   display: none;
@@ -126,9 +128,13 @@ nav .navbar .links li:hover .galeri-sub-menu {
   border-bottom: 1px solid rgba(0, 0, 0, 0.226);
 }
 .navbar .links li .sub-menu a {
-  color: black;
+  color: var(--secondary-color);
   font-size: 10px;
   font-weight: 600;
+}
+
+.navbar .links li .sub-menu a:hover {
+  color: var(--primary-color);
 }
 
 .navbar .links .sub-menu li:hover {
@@ -164,19 +170,6 @@ nav .navbar .links li:hover .galeri-sub-menu {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-}
-.navbar .search-box .input-box {
-  position: absolute;
-  right: calc(100% - 40px);
-  top: 80px;
-  height: 60px;
-  width: 300px;
-  color: black;
-  background: #162125;
-  border-radius: 6px;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.4s ease;
 }
 .navbar.showInput .search-box .input-box {
   top: 65px;
@@ -229,7 +222,7 @@ nav .navbar .links li:hover .galeri-sub-menu {
 }
 
 .card-01 {
-  background: #ffffff;
+  background: var(--tertiary-color);
   position: relative;
   flex: 1;
   max-width: 800px;
@@ -254,7 +247,7 @@ nav .navbar .links li:hover .galeri-sub-menu {
   -o-border-radius: 5px;
 }
 #secondary {
-  background: #fff;
+  background: var(--tertiary-color);
   position: relative;
   flex: 1;
   width: 360px;
@@ -266,7 +259,7 @@ nav .navbar .links li:hover .galeri-sub-menu {
 }
 /* Berita Terbaru*/
 #third {
-  background: #fff;
+  background: var(--tertiary-color);
   position: relative;
   flex: 1;
   width: 360px;
@@ -283,6 +276,9 @@ a {
 }
 .berita ul li {
   display: flex;
+}
+.berita ul li a {
+  color: var(--fourth-color);
 }
 figure {
   margin: 0;
@@ -302,6 +298,7 @@ figure {
   font-size: 8px;
   text-transform: uppercase;
   margin: 0 20px;
+  color: var(--secondary-color);
 }
 .post-title {
   font-family: "Rajdhani", sans-serif;
@@ -310,7 +307,7 @@ figure {
 }
 /* Kategori */
 #fourth {
-  background: #fff;
+  background: var(--tertiary-color);
   position: relative;
   flex: 1;
   width: 360px;
@@ -349,6 +346,7 @@ figure {
   font-weight: 700;
   margin: 20px;
   font-size: 22px;
+  color: var(--secondary-color);
 }
 .entry-title::before {
   content: "";
@@ -370,7 +368,7 @@ figure {
   font-family: "Open Sans", sans-serif;
   margin: 20px;
   font-size: 12px;
-  color: #333;
+  color: var(--secondary-color);
 }
 /* Article End */
 /* Search News Start*/
@@ -380,6 +378,7 @@ figure {
   margin: 20px;
   font-size: 15px;
   font-weight: 700;
+  color: var(--secondary-color);
 }
 .second-title::before {
   content: "";
@@ -632,7 +631,7 @@ table td {
     display: block;
     max-width: 270px;
     width: 100%;
-    background: white;
+    background: var(--primary-color);
     line-height: 40px;
     padding: 20px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -646,7 +645,7 @@ table td {
   }
   .sidebar-logo .logo-name {
     font-size: 25px;
-    color: black;
+    color: var(--secondary-color);
   }
   .sidebar-logo i,
   .navbar .bx-menu {

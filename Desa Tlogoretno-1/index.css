@@ -433,7 +433,7 @@ input[type="submit"]:active {
   margin: 0 auto;
 }
 .carousel {
-  width: 100vh;
+  width: 95vw;
   height: 100vh;
   position: relative;
 }
@@ -479,7 +479,7 @@ input[type="submit"]:active {
   border-radius: 0.25rem;
   padding: 0 0.5rem;
   background-color: rgba(0, 0, 0, .1);
-  margin: 0 -100px;
+  margin: 0 -10px;
 }
 
 .carousel-button:hover,
@@ -642,8 +642,8 @@ table td {
     font-size: 10px;
   }
   .slide img {
-    width: 500px;
-    height: 500px;
+    width: 850px;
+    height: 700px;
   }
   .card-01 {
     flex: 100%;
@@ -774,8 +774,8 @@ table td {
     transform: rotate(180deg);
   }
   .slide img {
-    width: 350px;
-    height: 350px;
+    width: 700px;
+    height: 550px;
   }
   .card-01 {
     flex: 100%;
@@ -819,8 +819,8 @@ table td {
       max-width: 100%;
     }
     .slide img {
-      width: 200px;
-      height: 200px;
+      width: 350px;
+      height: 300px;
     }
     .card-01 {
       margin-left: 40px;

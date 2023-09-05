@@ -17,19 +17,19 @@
     <!-- Navbar Start -->
     <nav>
         <div class="navbar">
-            <i class='bx bx-menu' style="color: black; font-size: 22px;"></i>
+            <i class='bx bx-menu' style="color: var(--secondary-color); font-size: 22px;"></i>
             <div class="logo"><a href="#">Desa Tlogoretno</a></div>
             <div class="nav-links">
                 <div class="sidebar-logo">
                     <span class="logo-name">Tlogoretno</span>
-                    <i class="bx bx-x" style="color: #000000; font-size: 22px;"></i>
+                    <i class="bx bx-x" style="color: var(--secondary-color); font-size: 22px;"></i>
                 </div>
                 <ul class="links">
                     <li class="sub-links"><a href="index.html">HOME</a></li>
                     <li class="sub-links">
                         <a href="#">PROFILE
                             <i class='bx bx-chevron-down profile-arrow arrow'
-                                style="color: #000000; font-size: 22px;"></i>
+                                style="color: var(--secondary-color); font-size: 22px;"></i>
                         </a>
 
                         <ul class="profile-sub-menu sub-menu">
@@ -42,7 +42,7 @@
                     <li class="sub-links">
                         <a href="#">PELAYANAN
                             <i class='bx bx-chevron-down pelayanan-arrow arrow'
-                                style="color: #000000; font-size: 22px;"></i>
+                                style="color: var(--secondary-color); font-size: 22px;"></i>
                         </a>
                         <ul class="pelayanan-sub-menu sub-menu">
                             <li><a href="kependudukan.html">KEPENDUDUKAN</a></li>
@@ -50,12 +50,12 @@
                             <li><a href="suratPage.html">SURAT MENYURAT</a></li>
                         </ul>
                     </li>
-                    <li class="sub-links"><a href="#">PRODUK DESA</a></li>
-                    <li class="sub-links"><a href="#">BERITA</a></li>
+                    <li class="sub-links"><a href="produk.html">PRODUK DESA</a></li>
+                    <li class="sub-links"><a href="berita.html">BERITA</a></li>
                     <li class="sub-links">
                         <a href="#">GALERI
                             <i class='bx bx-chevron-down galeri-arrow arrow'
-                                style="color: #000000; font-size: 22px;"></i>
+                                style="color: var(--secondary-color); font-size: 22px;"></i>
                             <ul class="galeri-sub-menu sub-menu">
                         </a>
                     <li><a href="#">FOTO</a></li>
@@ -64,12 +64,7 @@
                 </li>
                 </ul>
             </div>
-            <div class="search-box">
-                <i class="fa-solid fa-magnifying-glass bx bx-search" style="color: #000000;"></i>
-                <div class="input-box">
-                    <input type="text" placeholder="Search...">
-                </div>
-            </div>
+            <div class="bx bx-moon" id="icon"></div>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -254,6 +249,17 @@
         </div>
     </div>
     <!-- Footer End -->
+    <script>
+        var icon = document.getElementById("icon");
+        icon.onclick = function() {
+            document.body.classList.toggle("dark-theme");
+            if(icon.classList.contains("bx-moon")) {
+                icon.classList.replace('bx-moon', 'bx-sun');
+            }else {
+                icon.classList.replace('bx-sun', 'bx-moon');
+            }
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 
