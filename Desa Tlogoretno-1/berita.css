@@ -435,8 +435,8 @@ figure {
 }
 
 .blog-container {
-  width: 1170px;
-  max-width: 1070px;
+  width: 1070px;
+  max-width: 1170px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -658,7 +658,15 @@ table td {
     max-width: 600px;
   }
   .blog-box {
-    width: 300px;
+    width: 100%;
+    margin: 10px;
+  }
+  .input-group {
+    width: 730px;
+    margin: 0 0 10px 20px;
+  }
+  .blog-container {
+    width: 750px;
   }
   #secondary,
   #third,
@@ -789,7 +797,14 @@ table td {
     max-width: 600px;
   }
   .blog-box {
-    width: 70%;
+    width: 100%;
+  }
+  .input-group {
+    width: 735px;
+    margin: 0 0 20px 30px;
+  }
+  .blog-container {
+    width: 750px;
   }
   #secondary,
   #third,
@@ -836,6 +851,13 @@ table td {
     .blog-box {
       margin: 20px 10px;
       width: 100%;
+    }
+    .input-group {
+      width: 335px;
+      margin: 20px 0 20px 30px;
+    }
+    .blog-container {
+      width: 360px;
     }
     #blog {
       padding: 20px;
