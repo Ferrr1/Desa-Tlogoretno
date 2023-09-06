@@ -17,12 +17,12 @@
     <!-- Navbar Start -->
     <nav>
         <div class="navbar">
-            <i class='bx bx-menu' style="color: black; font-size: 22px;"></i>
+            <i class='bx bx-menu' style="color: var(--secondary-color); font-size: 22px;"></i>
             <div class="logo"><a href="#">Desa Tlogoretno</a></div>
             <div class="nav-links">
                 <div class="sidebar-logo">
                     <span class="logo-name">Tlogoretno</span>
-                    <i class="bx bx-x" style="color: #000000; font-size: 22px;"></i>
+                    <i class="bx bx-x" style="color: var(--secondary-color); font-size: 22px;"></i>
                 </div>
                 <ul class="links">
                     <li class="sub-links"><a href="index.html">HOME</a></li>
@@ -64,12 +64,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="search-box">
-                <i class="fa-solid fa-magnifying-glass bx bx-search" style="color: #000000;"></i>
-                <div class="input-box">
-                    <input type="text" placeholder="Search...">
-                </div>
-            </div>
+            <div class="bx bx-moon" id="icon"></div>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -77,9 +72,25 @@
     <div id="main">
         <section aria-label="Newest Photos">
             <center>
+                <div class="carousel">
+                    <div class="slide active">
+                        <img src="img/pexels-soly-moses-16701076.jpg" alt="Image #1">
+                    </div>
+                    <div class="slide">
+                        <img src="img/berita-2.jpg" alt="Image #1">
+                    </div>
+                    <div class="slide">
+                        <img src="img/berita-1.jpg" alt="Image #1">
+                    </div>
+                </div>
+            </center>
+
+            <!-- <center>
                 <div class="carousel" data-carousel>
-                    <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
-                    <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+                    <button class="carousel-button prev" data-carousel-button="prev">
+                        <i class='bx bx-chevron-left' style='color:#ffffff'></i></button>
+                    <button class="carousel-button next" data-carousel-button="next">
+                        <i class='bx bx-chevron-right' style='color:#ffffff'></i></button>
                     <ul data-slides>
                         <li class="slide" data-active>
                             <img src="img/pexels-soly-moses-16701076.jpg" alt="Image #1">
@@ -92,8 +103,81 @@
                         </li>
                     </ul>
                 </div>
-            </center>
+            </center> -->
         </section>
+        <div class="second-title-outer">
+            <h3 class="second-title"><i class='bx bx-news' style="margin-right: 3px;"></i>BERITA TERBARU</h3>
+        </div>
+        <section id="blog">
+            <div class="row">
+                <form method="GET" action="">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Masukkan Judul Produk" autocomplete="off"
+                            id="articles" minlength="3" required>
+                        <span class="input-group-btn">
+                            <button class="btn btn-search" type="submit">
+                                <i class='bx bx-search' style='color:#ffffff'></i>
+                                Search</button>
+                        </span>
+                    </div>
+                </form>
+                <div id="produk">
+
+                </div>
+            </div>
+    </div>
+    <div class="blog-container">
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="img/berita-1.jpg" alt="img-1">
+            </div>
+            <div class="blog-text">
+                <span>17 Agustus 2023</span>
+                <a href="#" class="blog-title">Pembukaan Kuliah Kerja Nyata Universitas Muhammadiyah Gresik
+                    Kelompok
+                    11 Tahun 2023 Bersama Ibu-Ibu Penggerak PKK Desa Tlogoretno</a>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde iusto nemo illum ipsa magni
+                    pariatur ratione veritatis laudantium mollitia dolore.</p>
+            </div>
+        </div>
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="img/berita-2.jpg" alt="img-2">
+            </div>
+            <div class="blog-text">
+                <span>27 Agustus 2023</span>
+                <a href="#" class="blog-title">Pemasangan Plang Setiap Nama Jalan di Desa Tlogoretno Oleh
+                    Mahasiswa
+                    KKN Universitas Muhammadiyah Gresik dan Karang Taruna</a>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde iusto nemo illum ipsa magni
+                    pariatur ratione veritatis laudantium mollitia dolore.</p>
+            </div>
+        </div>
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="img/berita-3.jpg" alt="img-3">
+            </div>
+            <div class="blog-text">
+                <span>04 September 2023</span>
+                <a href="#" class="blog-title">Program Kerja Mural: Menghias Dinding Telagadenok Dusun Kepodang,
+                    Desa Tlogoretno - KKN Universitas Muhammadiyah Gresik Kelompok 11 Tahun 2023. </a>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde iusto nemo illum ipsa magni
+                    pariatur ratione veritatis laudantium mollitia dolore.</p>
+            </div>
+        </div>
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="img/KakakAdik.jpg" alt="img-3">
+            </div>
+            <div class="blog-text">
+                <span>04 September 2023</span>
+                <a href="#" class="blog-title">Kakak Adik Sedang Tidur Bersama</a>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde iusto nemo illum ipsa magni
+                    pariatur ratione veritatis laudantium mollitia dolore.</p>
+            </div>
+        </div>
+    </div>
+    </section>
     </div>
     <section class="contact" id="contact">
         <div class="contact-box">
@@ -165,6 +249,17 @@
         </div>
     </div>
     <!-- Footer End -->
+    <script>
+        var icon = document.getElementById("icon");
+        icon.onclick = function () {
+            document.body.classList.toggle("dark-theme");
+            if (icon.classList.contains("bx-moon")) {
+                icon.classList.replace('bx-moon', 'bx-sun');
+            } else {
+                icon.classList.replace('bx-sun', 'bx-moon');
+            }
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 

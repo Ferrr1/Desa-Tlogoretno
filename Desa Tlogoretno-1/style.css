@@ -6,16 +6,16 @@
   box-sizing: border-box;
 }
 :root {
-  --primary-color : white;
-  --secondary-color : rgb(0, 0, 0);
-  --tertiary-color : #fff;
-  --fourth-color : rgb(12, 12, 146);
+  --primary-color: white;
+  --secondary-color: rgb(0, 0, 0);
+  --tertiary-color: #fff;
+  --fourth-color: rgb(12, 12, 146);
 }
 .dark-theme {
-  --primary-color : rgb(36, 36, 36);
-  --secondary-color : white;
-  --tertiary-color : rgb(48, 48, 48);
-  --fourth-color : rgb(200, 200, 206);
+  --primary-color: rgb(36, 36, 36);
+  --secondary-color: white;
+  --tertiary-color: rgb(48, 48, 48);
+  --fourth-color: rgb(200, 200, 206);
 }
 #icon {
   font-size: 22px;
@@ -85,6 +85,10 @@ nav .navbar .links li a {
   font-weight: 600;
   padding: 0 15px;
   transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 nav .navbar .links .sub-links > a:hover {
   color: var(--primary-color);
@@ -211,6 +215,7 @@ nav .navbar .links li:hover .galeri-sub-menu {
   margin: 50px 40px;
   position: relative;
   top: 35px;
+  color: var(--primary-color);
 }
 
 .row {

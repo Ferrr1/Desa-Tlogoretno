@@ -5,9 +5,27 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --primary-color: white;
+  --secondary-color: rgb(0, 0, 0);
+  --tertiary-color: #fff;
+  --fourth-color: rgb(12, 12, 146);
+}
+.dark-theme {
+  --primary-color: rgb(36, 36, 36);
+  --secondary-color: white;
+  --tertiary-color: rgb(48, 48, 48);
+  --fourth-color: rgb(200, 200, 206);
+}
+#icon {
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--secondary-color);
+}
 body {
   min-height: 100vh;
-  background-color: #f1f1f1;
+  background-color: var(--primary-color);
+  transition: all 0.4s ease;
 }
 /* Navbar Start */
 nav {
@@ -18,9 +36,10 @@ nav {
   height: 100%;
   font-family: "Rajdhani", sans-serif;
   height: 70px;
-  background: #fff;
+  background: var(--primary-color);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   z-index: 99;
+  transition: all 0.3s ease;
 }
 nav .navbar {
   height: 100%;
@@ -34,9 +53,10 @@ nav .navbar {
 }
 .navbar .logo a {
   font-size: 20px;
-  color: black;
+  color: var(--secondary-color);
   text-decoration: none;
   font-weight: 700;
+  transition: all 0.3s ease;
 }
 nav .navbar .nav-links {
   line-height: 70px;
@@ -60,13 +80,18 @@ nav .navbar .links li a {
   align-items: center;
   text-decoration: none;
   white-space: nowrap;
-  color: black;
+  color: var(--secondary-color);
   font-size: 10px;
   font-weight: 600;
   padding: 0 15px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 nav .navbar .links .sub-links > a:hover {
-  color: white;
+  color: var(--primary-color);
 }
 .links li:hover .profile-arrow,
 .links li:hover .pelayanan-arrow,
@@ -83,7 +108,7 @@ nav .navbar .links li .arrow {
   line-height: 70px;
   text-align: center;
   display: inline-block;
-  color: #fff;
+  color: var(--primary-color);
   transition: all 0.3s ease;
 }
 nav .navbar .links li .sub-menu {
@@ -91,11 +116,12 @@ nav .navbar .links li .sub-menu {
   top: 70px;
   left: 0;
   line-height: 40px;
-  background: white;
+  background: var(--primary-color);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 4px 4px;
   display: none;
   z-index: 2;
+  transition: all 0.3s ease;
 }
 nav .navbar .links li:hover .profile-sub-menu,
 nav .navbar .links li:hover .pelayanan-sub-menu,
@@ -107,9 +133,13 @@ nav .navbar .links li:hover .galeri-sub-menu {
   border-bottom: 1px solid rgba(0, 0, 0, 0.226);
 }
 .navbar .links li .sub-menu a {
-  color: black;
+  color: var(--secondary-color);
   font-size: 10px;
   font-weight: 600;
+  transition: all 0.3s ease;
+}
+.navbar .links li .sub-menu a:hover {
+  color: var(--primary-color);
 }
 
 .navbar .links .sub-menu li:hover {
@@ -129,65 +159,7 @@ nav .navbar .links li:hover .galeri-sub-menu {
 .links li .sub-menu .more:hover .more-sub-menu {
   display: block;
 }
-.navbar .search-box {
-  position: relative;
-  height: 40px;
-  width: 40px;
-}
-.navbar .search-box i {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  line-height: 40px;
-  text-align: center;
-  font-size: 22px;
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.navbar .search-box .input-box {
-  position: absolute;
-  right: calc(100% - 40px);
-  top: 80px;
-  height: 60px;
-  width: 300px;
-  color: black;
-  background: #162125;
-  border-radius: 6px;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.4s ease;
-}
-.navbar.showInput .search-box .input-box {
-  top: 65px;
-  opacity: 1;
-  pointer-events: auto;
-  background: #162125;
-}
-.search-box .input-box::before {
-  content: "";
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  background: #162125;
-  right: 10px;
-  top: -6px;
-  transform: rotate(45deg);
-}
-.search-box .input-box input {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 4px;
-  transform: translate(-50%, -50%);
-  height: 35px;
-  width: 280px;
-  outline: none;
-  padding: 0 15px;
-  font-size: 16px;
-  border: none;
-}
+
 .navbar .nav-links .sidebar-logo {
   display: none;
 }
@@ -195,14 +167,195 @@ nav .navbar .links li:hover .galeri-sub-menu {
   display: none;
 }
 /* Navbar End */
+.second-title {
+  position: relative;
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-family: "Rajdhani", sans-serif;
+  margin: 0;
+}
+.second-title-outer h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--secondary-color);
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+}
+.second-title::before {
+  content: "";
+  position: absolute;
+  width: 190px;
+  height: 3px;
+  display: block;
+  margin-bottom: 10px;
+  background-color: #50a7ff;
+}
+div .second-title-outer::before {
+  content: "";
+  position: absolute;
+  max-width: 100%;
+  height: 1Q;
+  /* margin: 38px 0; */
+  left: 8%;
+  display: block;
+  background-color: #50a7ff;
+}
 /* Article Start */
 #main {
-  margin: 50px 40px;
+  margin: 35px 0;
   position: relative;
   top: 35px;
   height: 100vh;
+  background-color: var(--primary-color);
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+}
+/* Search Bar Produk & Berita */
+
+.input-group {
+  display: flex;
+  justify-content: center;
 }
 
+input[type="text"] {
+  width: 870px;
+  height: 40px;
+  padding: 10px;
+  outline: #16212585;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+input[type="text"]:focus {
+  outline: none;
+  filter: drop-shadow(#50a7ff 1px 1px 2px);
+  -webkit-filter: drop-shadow(#50a7ff 1px 1px 2px);
+}
+input[type="text"]::placeholder {
+  font-size: 14px;
+  color: #1621257d;
+}
+button i {
+  position: absolute;
+  font-size: 18px;
+  margin-left: -20px;
+  margin-top: 2px;
+}
+button[type="submit"] {
+  font-family: "Rajdhani", sans-serif;
+  background-color: #50a7ff;
+  width: 80px;
+  height: 40px;
+  padding-left: 20px;
+  outline: none;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  -webkit-border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  -ms-border-radius: 0 5px 5px 0;
+  -o-border-radius: 0 5px 5px 0;
+}
+/* End Search Bar Produk dan Berita */
+
+#blog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.blog-container {
+  width: 100%;
+  /*max-width: 1170px;
+  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  flex-wrap: wrap;
+  background-color: var(--primary-color);
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+}
+
+.blog-box {
+  width: 222.5px;
+  height: 380px;
+  background-color: var(--primary-color);
+  filter: drop-shadow(var(--secondary-color) 0.5px 0.5px 1px);
+  margin: 10px;
+  border-radius: 2px;
+  -webkit-filter: drop-shadow(var(--secondary-color) 0.5px 0.5px 1px);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+.blog-img {
+  width: 100%;
+  height: auto;
+}
+
+.blog-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.blog-text {
+  max-width: 100%;
+  font-family: "Open Sans", sans-serif;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-text span {
+  color: var(--secondary-color);
+  font-size: 0.6rem;
+}
+
+.blog-text .blog-title {
+  font-size: 1rem;
+  font-weight: 700;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+}
+
+.blog-text p {
+  color: gray;
+  font-size: 0.7rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 15px 0;
+}
 .row {
   width: 100%;
   display: flex;
@@ -432,9 +585,9 @@ input[type="submit"]:active {
   padding: 0 15px;
   margin: 0 auto;
 }
-.carousel {
-  width: 95vw;
-  height: 100vh;
+/* .carousel {
+  width: 100%;
+  height: 80vh;
   position: relative;
 }
 
@@ -474,18 +627,18 @@ input[type="submit"]:active {
   font-size: 4rem;
   top: 50%;
   transform: translateY(-50%);
-  color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
   border-radius: 0.25rem;
   padding: 0 0.5rem;
-  background-color: rgba(0, 0, 0, .1);
+  background-color: rgba(0, 0, 0, 0.1);
   margin: 0 -10px;
 }
 
 .carousel-button:hover,
 .carousel-button:focus {
   color: white;
-  background-color: rgba(0, 0, 0, .2);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .carousel-button:focus {
@@ -498,6 +651,28 @@ input[type="submit"]:active {
 
 .carousel-button.next {
   right: 1rem;
+} */
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  height: 80vh;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+}
+
+.active {
+  display: block;
+  opacity: 1;
 }
 
 .widget-inner {
@@ -686,12 +861,16 @@ table td {
     display: block;
     max-width: 270px;
     width: 100%;
-    background: white;
+    background: var(--primary-color);
     line-height: 40px;
     padding: 20px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.5s ease;
+    transition: all 0.4s ease;
     z-index: 1000;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
   }
   .navbar .nav-links .sidebar-logo {
     display: flex;
@@ -700,7 +879,7 @@ table td {
   }
   .sidebar-logo .logo-name {
     font-size: 25px;
-    color: black;
+    color: var(--secondary-color);
   }
   .sidebar-logo i,
   .navbar .bx-menu {

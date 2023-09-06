@@ -132,7 +132,9 @@ nav .navbar .links li:hover .galeri-sub-menu {
   font-size: 10px;
   font-weight: 600;
 }
-
+.navbar .links li .sub-menu a:hover {
+  color: var(--primary-color);
+}
 .navbar .links .sub-menu li:hover {
   background-color: #4fa3e9;
 }
