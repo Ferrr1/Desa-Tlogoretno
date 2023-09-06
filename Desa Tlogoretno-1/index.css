@@ -831,6 +831,17 @@ table td {
     flex: 100%;
     max-width: 600px;
   }
+  .blog-box {
+    width: 100%;
+    margin: 10px;
+  }
+  .input-group {
+    width: 730px;
+    margin: 0 0 10px 20px;
+  }
+  .blog-container {
+    width: 750px;
+  }
   #secondary,
   #third,
   #fourth {
@@ -967,6 +978,16 @@ table td {
     flex: 100%;
     max-width: 600px;
   }
+  .blog-box {
+    width: 100%;
+  }
+  .input-group {
+    width: 735px;
+    margin: 0 0 20px 30px;
+  }
+  .blog-container {
+    width: 750px;
+  }
   #secondary,
   #third,
   #fourth {
@@ -1012,6 +1033,20 @@ table td {
     .card-02 {
       flex: 100%;
       width: 360px;
+    }
+    .blog-box {
+      margin: 20px 10px;
+      width: 100%;
+    }
+    .input-group {
+      width: 335px;
+      margin: 20px 0 20px 30px;
+    }
+    .blog-container {
+      width: 360px;
+    }
+    #blog {
+      padding: 20px;
     }
     #secondary,
     #third,

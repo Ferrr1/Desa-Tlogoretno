@@ -85,10 +85,6 @@ nav .navbar .links li a {
   font-weight: 600;
   padding: 0 15px;
   transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
 }
 nav .navbar .links .sub-links > a:hover {
   color: var(--primary-color);
@@ -215,7 +211,6 @@ nav .navbar .links li:hover .galeri-sub-menu {
   margin: 50px 40px;
   position: relative;
   top: 35px;
-  color: var(--primary-color);
 }
 
 .row {
