@@ -1056,31 +1056,31 @@ table td {
       left: 8%;
       display: block;
       background-color: #50a7ff;
-      .blog-container {
-        margin-left: 35px;
-        width: 350px;
-      }
-      #blog {
-        padding: 20px;
-      }
-      #secondary,
-      #third,
-      #fourth {
-        width: 350px;
-        margin-left: 20px;
-      }
-      #fourth {
-        height: 150px;
-      }
-      .footer-credit {
-        text-align: center;
-      }
-      .copy-umg {
-        display: none;
-      }
-      .container {
-        width: 370px;
-      }
+    }
+    .blog-container {
+      margin-left: 35px;
+      width: 350px;
+    }
+    #blog {
+      padding: 20px;
+    }
+    #secondary,
+    #third,
+    #fourth {
+      width: 350px;
+      margin-left: 20px;
+    }
+    #fourth {
+      height: 150px;
+    }
+    .footer-credit {
+      text-align: center;
+    }
+    .copy-umg {
+      display: none;
+    }
+    .container {
+      width: 370px;
     }
   }
 }
