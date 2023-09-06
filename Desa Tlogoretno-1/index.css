@@ -1045,21 +1045,17 @@ table td {
     }
     .input-group {
       width: 335px;
-      margin: 20px 0 20px 35px;
+      margin: 20px 0 20px 20px;
     }
     div .second-title-outer::before {
-      content: "";
-      position: absolute;
-      max-width: 100%;
-      height: 1Q;
-      /* margin: 38px 0; */
-      left: 8%;
-      display: block;
-      background-color: #50a7ff;
+      left: 5%;
     }
     .blog-container {
-      margin-left: 35px;
+      margin-left: 20px;
       width: 350px;
+    }
+    #main {
+      height: 70%;
     }
     #blog {
       padding: 20px;
