@@ -661,6 +661,7 @@ input[type="submit"]:active {
 .slide {
   width: 100%;
   height: 80vh;
+  object-fit: cover;
   display: none;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
@@ -1018,9 +1019,13 @@ table td {
     nav .navbar .nav-links {
       max-width: 100%;
     }
+    .carousel {
+      height: 50vh;
+    }
     .slide img {
-      width: 350px;
-      height: 300px;
+      width: 100%;
+      object-fit: cover;
+      height: 350px;
     }
     .card-01 {
       margin-left: 40px;
@@ -1040,10 +1045,20 @@ table td {
     }
     .input-group {
       width: 335px;
-      margin: 20px 0 20px 30px;
+      margin: 20px 0 20px 35px;
     }
+    div .second-title-outer::before {
+      content: "";
+      position: absolute;
+      max-width: 100%;
+      height: 1Q;
+      /* margin: 38px 0; */
+      left: 8%;
+      display: block;
+      background-color: #50a7ff;
     .blog-container {
-      width: 360px;
+      margin-left: 35px;
+      width: 350px;
     }
     #blog {
       padding: 20px;
